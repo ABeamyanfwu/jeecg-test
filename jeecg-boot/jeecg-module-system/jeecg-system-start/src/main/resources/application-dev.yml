@@ -124,7 +124,7 @@ spring:
         # 初始化大小，最小，最大
         initial-size: 5
         min-idle: 5
-        maxActive: 1000
+        maxActive: 500
         # 配置获取连接等待超时的时间
         maxWait: 60000
         # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
@@ -149,9 +149,10 @@ spring:
           slow-sql-millis: 5000
       datasource:
         master:
+#          url: jdbc:mysql://127.0.0.1:3306/fts_dt_mgnt_system_db?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
           url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
           username: root
-          password: root
+          password: 12345
           driver-class-name: com.mysql.cj.jdbc.Driver
 #        # shardingjdbc数据源
 #        sharding-db:
@@ -163,7 +164,7 @@ spring:
       database: 0
       host: 127.0.0.1
       port: 6379
-      password:
+      password: 123456
 #mybatis plus 设置
 mybatis-plus:
   mapper-locations: classpath*:org/jeecg/**/xml/*Mapper.xml
@@ -279,7 +280,7 @@ jeecg:
   #分布式锁配置
   redisson:
     address: 127.0.0.1:6379
-    password:
+    password: 123456
     type: STANDALONE
     enabled: true
   # 百度开放API配置
