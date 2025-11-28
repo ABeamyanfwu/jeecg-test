@@ -538,6 +538,7 @@
 				<artifactId>flyway-core</artifactId>
 				<version>7.15.0</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -633,6 +634,7 @@
 				<config.password></config.password>
             </properties>
         </profile>
+
 		<!-- 测试Nacos开启鉴权、设置分组和命名空间
 		<profile>
 			<id>dev</id>
